@@ -1,0 +1,29 @@
+{
+  "name": "cloth-and-fashion",
+  "version": "0.0.1",
+  "description": "online shop markup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kompanietsaleksandra/cloth-and-fashion.git"
+  },
+  "keywords": [
+    "html",
+    "css3",
+    "scss",
+    "js",
+    "jquery"
+  ],
+  "author": "Kompaniiets Oleksandra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kompanietsaleksandra/cloth-and-fashion/issues"
+  },
+  "homepage": "https://github.com/kompanietsaleksandra/cloth-and-fashion#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
