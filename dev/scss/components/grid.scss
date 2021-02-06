@@ -1,0 +1,14 @@
+.grid {
+  display: flex;
+  &__cards {
+    flex-direction: column;
+  }
+  &__promo {
+    justify-content: center;
+  }
+}
+
+.width__1 {
+  width: 100%;
+}
+

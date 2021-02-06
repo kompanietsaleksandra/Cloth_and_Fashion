@@ -1,0 +1,50 @@
+.section__promo {
+  background-color: #c5c5c5;
+  color: #ffffff;
+  padding: 5px 0 7px 0;
+}
+.section__catalog__img {
+  width: 42px;
+  height: 7px;
+  position: absolute;
+  left: 40%;
+  bottom: 50%
+}
+
+.section__catalog__cards {
+  position: relative;
+}
+
+.section__catalog__items img{
+  height: 277px;
+}
+
+.section {
+  &__title {
+    & img {
+      width: 130px;
+      margin: 0 auto;
+    }
+    justify-content: center;
+    padding-bottom: 30px;
+    padding-top: 65px;
+  }
+  &__slider {
+    &__container {
+      padding: 0;
+    }
+  }
+}
+
+.section__cards {
+  color: #ffffff;
+  &__items {
+    position: relative;
+  }
+  &__item {
+    position: absolute;
+    left: 40%;
+    bottom: 50%;
+  }
+}
+
