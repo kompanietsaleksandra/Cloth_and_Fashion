@@ -1,0 +1,6 @@
+@import "mixins";
+@include font-face(Rajdhani,   '../fonts/Rajdhani-Bold',   bold,   normal, ttf eot woff woff2 svg, swap);
+@include font-face(Rajdhani,  '../fonts/Rajdhani-Light',   300,    normal, ttf eot woff woff2 svg, swap);
+@include font-face(Rajdhani,  '../fonts/Rajdhani-Medium',  500,    normal, ttf eot woff woff2 svg, swap);
+@include font-face(Rajdhani, '../fonts/Rajdhani-Regular',  normal, normal, ttf eot woff woff2 svg, swap);
+@include font-face(Rajdhani, '../fonts/Rajdhani-SemiBold', 600,    normal, ttf eot woff woff2 svg, swap);
