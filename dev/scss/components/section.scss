@@ -1,50 +1,174 @@
-.section__promo {
-  background-color: #c5c5c5;
-  color: #ffffff;
-  padding: 5px 0 7px 0;
-}
-.section__catalog__img {
-  width: 42px;
-  height: 7px;
-  position: absolute;
-  left: 40%;
-  bottom: 50%
-}
+@import "variables";
+@import "mixins";
 
-.section__catalog__cards {
-  position: relative;
+.hero {
+  @media all and (min-width: 1600px){
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
-
-.section__catalog__items img{
-  height: 277px;
-}
-
 .section {
-  &__title {
-    & img {
-      width: 130px;
-      margin: 0 auto;
+  &__hero {
+    &__header {
+      background-color: #c5c5c5;
+      color: $color-secondary;
+      font-weight: 600;
+      font-size: 14px;
+      text-align: center;
+      padding: 0 15px;
     }
-    justify-content: center;
-    padding-bottom: 30px;
-    padding-top: 65px;
+    &__slider {
+      &__item {
+        position: relative;
+      }
+      &__text-block {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translate(0, -50%);
+        text-align: center;
+        &__text {
+          &__top {
+            hr {
+              background: $color-main;
+              height: 1px;
+              border: unset;
+              margin: 0;
+            }
+          }
+          &__bottom {
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+        }
+        &__btn {
+          margin-top: 15px;
+          button {
+            font-size: 16px;
+            background: transparent;
+            border: 2px solid $color-main;
+            box-shadow: 0 0 3px 0 $color-main;
+          }
+        }
+        @media all and (min-width: 768px){
+          width: 100%;
+          left: 0;
+          &__wrap {
+            width: 100%;
+            max-width: 668px;
+            margin: 0 auto;
+            text-align: left;
+          }
+          &__content {
+            display: inline-block;
+          }
+          &__text {
+            &__top {
+              font-size: 23px;
+            }
+            &__bottom {
+              font-size: 16px;
+            }
+          }
+          &__btn {
+            text-align: center;
+            button{
+              font-size: 16px;
+            }
+          }
+        }
+        @media all and (min-width: 1600px){
+          &__wrap {
+            max-width: 1230px;
+          }
+          &__text {
+            &__top {
+              font-size: 35px;
+            }
+            &__bottom {
+              font-size: 24px;
+            }
+          }
+          &__btn {
+            text-align: center;
+            button{
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+    .slick-dotted.slick-slider {
+      margin-bottom: 0;
+    }
+    @media all and (min-width: 1600px){
+      .slick-slide img {
+        height: 100vh;
+        object-fit: cover;
+      }
+      .slick-list.draggable {
+        height: 100vh;
+      }
+    }
+
+    .slick-dots {
+      bottom: 20px;
+      li {
+        height: 13px;
+        width: 13px;
+        margin: 0 7px;
+        &.slick-active {
+          button {
+            background: $color-main;
+          }
+        }
+        button {
+          background: $color-secondary;
+          border-radius: 100%;
+          border: 2px solid #acacac;
+        }
+      }
+    }
   }
-  &__slider {
-    &__container {
-      padding: 0;
+  &__product {
+    h2 {
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 500;
+      @media all and (min-width: 768px){
+        font-size: 20px;
+      }
+      @media all and (min-width: 1600px){
+        font-size: 24px;
+      }
+    }
+    &__slider {
+      .slick-slide {
+        opacity: 0.5;
+        @media all and (min-width: 768px){
+          opacity: 1;
+        }
+      }
+      .slick-current {
+        opacity: 1;
+      }
+      &__item {
+
+      }
+      &__image {
+        img {
+          max-height: 275px;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+      &__price {
+        text-align: center;
+        font-weight: 700;
+        font-size: 17px;
+        margin: 0.5em;
+      }
     }
   }
 }
-
-.section__cards {
-  color: #ffffff;
-  &__items {
-    position: relative;
-  }
-  &__item {
-    position: absolute;
-    left: 40%;
-    bottom: 50%;
-  }
-}
-

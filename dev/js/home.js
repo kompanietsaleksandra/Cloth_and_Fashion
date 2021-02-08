@@ -7,7 +7,7 @@ $(document).ready(function () {
     function menuHandler() {
 
         $('.header__burger').click(() => {
-            $('.header__menu').fadeIn(300);
+            $('.header__menu').fadeToggle(300);
         });
 
         $('.menu__item__expand').click(function (e) {
@@ -33,34 +33,34 @@ $(document).ready(function () {
 
     function slidersHandler() {
 
-        oneImageSlider('.slider');
-        centerModeSlider('.slider');
+        oneImageSlider('.section__hero__slider');
+        centerModeSlider('.section__product__slider');
         centerModeSlider('.slider');
         centerModeSlider('.slider');
 
         function oneImageSlider(selector) {
-            $(selector).slick();
+            $(selector).slick({
+                dots: true,
+                arrows: false
+            });
         }
 
         function centerModeSlider(selector) {
             $(selector).slick({
-                centerMode: true,
-                centerPadding: '60px',
-                slidesToShow: 3,
+                slidesToShow: 5,
+                arrows: false,
                 responsive: [
                     {
-                        breakpoint: 768,
+                        breakpoint: 767,
                         settings: {
-                            arrows: false,
                             centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 3
+                            centerPadding: '60px',
+                            slidesToShow: 4
                         }
                     },
                     {
                         breakpoint: 480,
                         settings: {
-                            arrows: false,
                             centerMode: true,
                             centerPadding: '40px',
                             slidesToShow: 1
